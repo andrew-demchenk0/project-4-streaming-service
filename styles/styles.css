@@ -1,4 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;0,900;1,500;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+}
+
 .nav__wrapper {
   display: flex;
   flex-direction: row;
@@ -69,7 +76,7 @@
   transform: translateY(5px);
 }
 .nav__dropdown:hover .nav__dropdown-btn {
-  background: var(--icon-color);
+  background: var(--hover-color);
 }
 .nav__dropdown:hover .nav__dropdown-content {
   display: block;
@@ -98,7 +105,122 @@
   border-bottom: none;
 }
 .nav__dropdown-content a:hover {
-  background-color: var(--icon-color);
+  background-color: var(--hover-color);
+}
+
+.aside {
+  position: fixed;
+  background: var(--bg-alternative-color);
+  height: 100%;
+}
+.aside__wrapper {
+  display: grid;
+  grid-template-columns: 240px;
+  grid-template-rows: 1fr 1px 150px;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  height: calc(100% - 66px);
+}
+.aside__divider {
+  border: 1px solid var(--bg-main-color);
+}
+.aside__streamers {
+  height: 100%;
+  overflow: auto;
+}
+.aside__streamers_streamer {
+  cursor: pointer;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+}
+.aside__streamers_streamer:hover {
+  background: var(--hover-color);
+}
+.aside__streamers_streamer-icon {
+  padding: 5px;
+  margin-right: 10px;
+  border-radius: 100%;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-main-color);
+}
+.aside__streamers_streamer-icon img {
+  width: 100%;
+  height: 100%;
+}
+.aside__streamers_streamer-wrapper {
+  display: flex;
+  width: calc(100% - 36px);
+  justify-content: space-between;
+  align-items: center;
+}
+.aside__streamers_streamer-nickname {
+  font-size: 15px;
+  font-weight: 500;
+}
+.aside__streamers_streamer-nickname:hover {
+  color: var(--text-hover-color);
+}
+.aside__streamers_streamer-viewers {
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 6px;
+}
+.aside__streamers_streamer-indicator {
+  margin-left: auto;
+  position: relative;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: var(--acent-color);
+}
+.aside__streamers_streamer-indicator:before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--acent-color);
+  animation: live 2s ease-in-out infinite;
+}
+.aside__info-content {
+  padding: 15px;
+  width: 100%;
+  height: 100%;
+  background: var(--icon-color);
+  text-align: center;
+}
+.aside__info-content_title {
+  font-size: 20px;
+  font-weight: 400;
+}
+.aside__info-content_socials {
+  font-size: 25px;
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+.aside__info-content_socials a:hover {
+  color: var(--text-hover-color);
+}
+
+@keyframes live {
+  0% {
+    transform: scale(1, 1);
+  }
+  100% {
+    transform: scale(3.5, 3.5);
+    background-color: rgba(255, 0, 0, 0);
+  }
+}
+main {
+  margin-left: 240px;
+  height: 2000px;
+  background: red;
 }
 
 :root {
@@ -107,7 +229,7 @@
   --bg-alternative-color: #EBEBEB;
   --acent-color: #FF0000;
   --text-color: #000;
-  --text-hover-color: #3F64E0;
+  --text-hover-color: #00A2FF;
   --hover-color: #DDD;
   --icon-color: #C1C1C1;
   --icon-hover-color: #818181;
@@ -122,6 +244,14 @@
 
 body {
   background: var(--bg-main-color);
+}
+body ::-moz-selection {
+  background: var(--main-color);
+  color: #fff;
+}
+body ::selection, body ::-moz-selection, body ::-webkit-selection {
+  background: var(--main-color);
+  color: #fff;
 }
 
 ul,
@@ -146,7 +276,6 @@ a {
   color: inherit;
   display: inline-block;
 }
-
 a:hover {
   -webkit-text-decoration: var(--text-hover-color);
           text-decoration: var(--text-hover-color);
@@ -158,20 +287,19 @@ p {
   padding: 0;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-          appearance: none;
-  margin: 0;
+.wrapper {
+  margin-top: 66px;
+  display: flex;
 }
 
 .container {
-  padding: 10px;
+  padding: 15px;
 }
 .container__nav {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background: var(--bg-main-color);
   box-shadow: 0 0 5px var(--text-color);
 }/*# sourceMappingURL=styles.css.map */

@@ -14,8 +14,14 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     background: var(--bg-main-color);
+    & ::selection,
+    & ::-moz-selection,
+    & ::-webkit-selection {
+      background: var(--main-color);
+      color: #fff;
+    }
 }
 
 ul,
@@ -39,11 +45,10 @@ a {
     text-decoration: none;
     color: inherit;
     display: inline-block;
-}
-
-a:hover {
-    text-decoration: var(--text-hover-color);
-    color: inherit;
+    &:hover {
+        text-decoration: var(--text-hover-color);
+        color: inherit;
+    }
 }
 
 p {
@@ -51,19 +56,19 @@ p {
     padding: 0;
 }
 
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    appearance: none;
-    margin: 0; 
+.wrapper{
+    margin-top: 66px;
+    display: flex;
 }
 
 .container{
-    padding: 10px;
+    padding: 15px;
     &__nav{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        background: var(--bg-main-color);
         box-shadow: 0 0 5px var(--text-color);
     }
 }
