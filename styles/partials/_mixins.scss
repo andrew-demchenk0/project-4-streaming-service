@@ -1,0 +1,62 @@
+@mixin videoHoverMask{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    top: 0;
+    left: 0;
+    i{
+        position: absolute;
+        top: calc(50% - 15px);
+        left: calc(50% - 15px);
+        font-size: 30px;
+        color: #fff;
+    }
+}
+@mixin liveIndicator{
+    position: absolute;
+    width: 40px;
+    height: 22px;
+    border-radius: 5px;
+    background: var(--acent-color);
+    margin: 5px;
+    z-index: 3;
+    &::before{
+        content: 'LIVE';
+        position: absolute;
+        top: 4px;
+        left: 7.5px;
+        font-size: 12px;
+        color: #fff;
+    }
+}
+@mixin timelineCouner{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: 40px;
+    height: 22px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.45);
+    font-size: 11px;
+    font-weight: 400;
+    color: #fff;
+    margin: 5px;
+    padding: 5px 7px;
+    z-index: 3;
+}
+@mixin viewersCounter{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    min-width: 40px;
+    height: 22px;
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.45);
+    font-size: 11px;
+    font-weight: 400;
+    color: #fff;
+    margin: 5px;
+    padding: 5px 7px;
+    z-index: 3;
+}

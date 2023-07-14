@@ -13,10 +13,13 @@ nav{
             width: 50%;
         }
     }
-    &__logo{
+    &__logo,
+    &__title{
         color: var(--main-color);
         font-size: 35px;
         cursor: pointer;
+        display: inline-block;
+        font-weight: 400;
     }
     &__logo:hover{
         color: var(--main-color);
