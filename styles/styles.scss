@@ -55,17 +55,11 @@ p {
 .wrapper{
     margin-top: 76px;
     display: flex;
+    // position: relative;
 }
 .container{
     padding: 15px;
-    &__nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--bg-main-color);
-        box-shadow: 0 0 5px var(--text-color);
-    }
+    width: 100%;
 }
 .video-hover-mask{
     @include videoHoverMask;

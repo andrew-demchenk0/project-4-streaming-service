@@ -1,58 +1,15 @@
-main{
-    margin-left: 240px;
-    width: 100%;
-    overflow: hidden;
-    height: 2000px;
-}
-.categories{
-    &__list{
-        overflow-x: auto;
-        white-space: nowrap;
-        -ms-overflow-style: none;
-        scrollbar-width: none;
-        display: grid;
-        grid-auto-flow: column;
-        grid-template-rows: 1fr;
-        gap: 15px;
-        &-item{
-            cursor: pointer;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 15px;
-            height: 36px;
-            border-radius: 100px;
-            border: 1px solid var(--icon-hover-color);
-            background: var(--bg-alternative-color);
-            &:first-child{
-                background: var(--main-color);
-                border: 1px solid transparent;
-                color: #fff;
-                &:hover{
-                    color: var(--text-color);
-                    border: 1px solid var(--icon-hover-color);
-                }
-            }
-            &:hover{
-                background: var(--hover-color);
-            }
-        }
-    }
-}
-
-.carusel {
+.carousel{
     margin-top: 50px;
-    width: 100%;
     width: 520px;
     height: 280px;
     transform-style: preserve-3d;
     margin-inline: auto;
-    &__cards {
+    &__cards{
         position: relative;
         width: 100%;
         height: 100%;
     }
-    &-card {
+    &-card{
         display: flex;
         position: absolute;
         width: 100%;
@@ -103,7 +60,8 @@ main{
                     height: 100%;
                 }
             }
-            &-title{
+            &-title,
+            &-nickname{
                 max-width: 100px;
                 font-size: 15px;
                 font-weight: 400;
@@ -118,7 +76,6 @@ main{
             &-nickname{
                 margin-top: 5px;
                 font-size: 12px;
-                font-weight: 400;
                 color: var(--icon-hover-color);
                 &:hover{
                     color: var(--text-hover-color);
@@ -134,50 +91,50 @@ main{
         }
     }
 }
-input[type=radio] {
+input[type=radio]{
     display: none;
 }
-#item-1:checked ~ .carusel__cards #card-5,
-#item-2:checked ~ .carusel__cards #card-1,
-#item-3:checked ~ .carusel__cards #card-2,
-#item-4:checked ~ .carusel__cards #card-3,
-#item-5:checked ~ .carusel__cards #card-4 {
+#item-1:checked ~ .carousel__cards #card-5,
+#item-2:checked ~ .carousel__cards #card-1,
+#item-3:checked ~ .carousel__cards #card-2,
+#item-4:checked ~ .carousel__cards #card-3,
+#item-5:checked ~ .carousel__cards #card-4{
     transform: translatex(-15%) scale(0.9);
     z-index: 2;
 }
   
-#item-1:checked ~ .carusel__cards #card-4,
-#item-2:checked ~ .carusel__cards #card-5,
-#item-3:checked ~ .carusel__cards #card-1,
-#item-4:checked ~ .carusel__cards #card-2,
-#item-5:checked ~ .carusel__cards #card-3{
+#item-1:checked ~ .carousel__cards #card-4,
+#item-2:checked ~ .carousel__cards #card-5,
+#item-3:checked ~ .carousel__cards #card-1,
+#item-4:checked ~ .carousel__cards #card-2,
+#item-5:checked ~ .carousel__cards #card-3{
     transform: translatex(-30%) scale(0.8);
     z-index: 1;
 }
   
-#item-1:checked ~ .carusel__cards #card-3,
-#item-2:checked ~ .carusel__cards #card-4,
-#item-3:checked ~ .carusel__cards #card-5,
-#item-4:checked ~ .carusel__cards #card-1,
-#item-5:checked ~ .carusel__cards #card-2  {
+#item-1:checked ~ .carousel__cards #card-3,
+#item-2:checked ~ .carousel__cards #card-4,
+#item-3:checked ~ .carousel__cards #card-5,
+#item-4:checked ~ .carousel__cards #card-1,
+#item-5:checked ~ .carousel__cards #card-2{
     transform: translatex(30%) scale(0.8);
     z-index: 1;
 }
   
-#item-1:checked ~ .carusel__cards #card-2,
-#item-2:checked ~ .carusel__cards #card-3,
-#item-3:checked ~ .carusel__cards #card-4,
-#item-4:checked ~ .carusel__cards #card-5,
-#item-5:checked ~ .carusel__cards #card-1 {
+#item-1:checked ~ .carousel__cards #card-2,
+#item-2:checked ~ .carousel__cards #card-3,
+#item-3:checked ~ .carousel__cards #card-4,
+#item-4:checked ~ .carousel__cards #card-5,
+#item-5:checked ~ .carousel__cards #card-1{
     transform: translatex(15%) scale(0.9);
     z-index: 2;
 }  
 
-#item-1:checked ~ .carusel__cards #card-1,
-#item-2:checked ~ .carusel__cards #card-2,
-#item-3:checked ~ .carusel__cards #card-3,
-#item-4:checked ~ .carusel__cards #card-4,
-#item-5:checked ~ .carusel__cards #card-5 {
+#item-1:checked ~ .carousel__cards #card-1,
+#item-2:checked ~ .carousel__cards #card-2,
+#item-3:checked ~ .carousel__cards #card-3,
+#item-4:checked ~ .carousel__cards #card-4,
+#item-5:checked ~ .carousel__cards #card-5{
     transform: translatex(0) scale(1);
     z-index: 3;
-    opacity: 1}
+}
