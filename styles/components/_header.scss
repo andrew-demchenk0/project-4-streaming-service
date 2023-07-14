@@ -1,10 +1,16 @@
-nav{
+header{
     position: fixed;
     top: 0;
     z-index: 10;
     width: 100%;
+    background: var(--bg-main-color);
+    box-shadow: 0 0 5px var(--text-color);
 }
 .nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     &__wrapper{
         display: flex;
         flex-direction: row;
@@ -13,10 +19,13 @@ nav{
             width: 50%;
         }
     }
-    &__logo{
+    &__logo,
+    &__title{
         color: var(--main-color);
         font-size: 35px;
         cursor: pointer;
+        display: inline-block;
+        font-weight: 400;
     }
     &__logo:hover{
         color: var(--main-color);

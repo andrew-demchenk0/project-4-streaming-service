@@ -1,0 +1,13 @@
+footer {
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+}
+.footer-icon,
+.footer__text{
+    margin: 30px 0 20px 0;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+}

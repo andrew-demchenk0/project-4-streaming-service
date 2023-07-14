@@ -1,0 +1,10 @@
+@import 'main-block/main-categories';
+@import 'main-block/main-carousel';
+@import 'main-block/main-videos';
+
+main{
+    position: relative;
+    margin-left: 240px;
+    width: 100%;
+    overflow: hidden;
+}

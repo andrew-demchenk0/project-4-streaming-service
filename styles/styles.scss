@@ -4,6 +4,7 @@
 @import 'partials/aside';
 @import 'partials/main';
 @import 'partials/footer';
+@import 'partials/mixins';
 
 @import 'partials/variables';
 
@@ -13,7 +14,6 @@
     padding: 0;
     box-sizing: border-box;
 }
-
 body {
     background: var(--bg-main-color);
     & ::selection,
@@ -23,7 +23,6 @@ body {
       color: #fff;
     }
 }
-
 ul,
 li,
 dl {
@@ -31,7 +30,6 @@ dl {
     margin: 0;
     padding: 0;
 }
-
 h1,
 h2,
 h3,
@@ -40,7 +38,6 @@ h5,
 h6 {
     margin: 0;
 }
-
 a {
     text-decoration: none;
     color: inherit;
@@ -50,25 +47,30 @@ a {
         color: inherit;
     }
 }
-
 p {
     margin: 0;
     padding: 0;
 }
 
 .wrapper{
-    margin-top: 66px;
+    margin-top: 76px;
     display: flex;
+    // position: relative;
 }
-
 .container{
     padding: 15px;
-    &__nav{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        background: var(--bg-main-color);
-        box-shadow: 0 0 5px var(--text-color);
-    }
+    width: 100%;
+}
+.video-hover-mask{
+    @include videoHoverMask;
+    display: none;
+}
+.live-indicator{
+    @include liveIndicator;
+}
+.timeline-counter{
+    @include timelineCouner;
+}
+.viewers-counter{
+    @include viewersCounter;
 }
