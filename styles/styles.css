@@ -325,7 +325,7 @@ header {
 }
 .carousel-card__wrapper {
   padding: 15px 10px;
-  max-width: 170px;
+  width: 170px;
   height: 100%;
   background: var(--bg-alternative-color);
   border-radius: 0 5px 5px 0;
@@ -369,12 +369,15 @@ header {
   color: var(--text-hover-color);
 }
 .carousel-card__streamer-descr {
+  width: 150px;
+  height: 200px;
   display: block;
   font-size: 12px;
   font-weight: 400;
   grid-column: 1/span 2;
   color: var(--icon-hover-color);
-  overflow: hidden;
+  overflow: scroll;
+  overflow-wrap: break-word;
 }
 
 input[type=radio] {
@@ -426,13 +429,33 @@ input[type=radio] {
   z-index: 3;
 }
 
+@media (min-width: 1500px) {
+  .carousel {
+    margin-top: 40px;
+    max-width: 640px;
+    height: 300px;
+  }
+  .carousel-card__wrapper {
+    width: 190px;
+  }
+  .carousel-card__streamer-descr {
+    height: 215px;
+  }
+}
 @media (max-width: 1000px) {
   .carousel {
     margin-top: 40px;
     max-width: 420px;
     height: 230px;
   }
+  .carousel-card__wrapper {
+    width: 160px;
+  }
+  .carousel-card__streamer-title, .carousel-card__streamer-nickname {
+    max-width: 90px;
+  }
   .carousel-card__streamer-descr {
+    width: 141px;
     height: 145px;
   }
 }
@@ -442,7 +465,14 @@ input[type=radio] {
     max-width: 320px;
     height: 200px;
   }
+  .carousel-card__wrapper {
+    width: 150px;
+  }
+  .carousel-card__streamer-title, .carousel-card__streamer-nickname {
+    max-width: 80px;
+  }
   .carousel-card__streamer-descr {
+    width: 135px;
     height: 115px;
   }
 }
@@ -458,7 +488,6 @@ input[type=radio] {
   width: auto;
 }
 .video__img {
-  cursor: pointer;
   position: relative;
   height: 210px;
   width: 100%;
@@ -473,7 +502,7 @@ input[type=radio] {
      object-fit: cover;
 }
 .video__info {
-  padding: 10px 10px 10px 0;
+  padding: 10px 0 10px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -513,6 +542,7 @@ input[type=radio] {
 }
 .video__streamer-menu {
   cursor: pointer;
+  padding: 0 10px;
   margin-bottom: auto;
   font-size: 20px;
 }
@@ -649,6 +679,7 @@ p {
   display: none;
 }
 .video-hover-mask i {
+  cursor: pointer;
   position: absolute;
   top: calc(50% - 15px);
   left: calc(50% - 15px);
@@ -657,6 +688,7 @@ p {
 }
 
 .live-indicator {
+  cursor: pointer;
   position: absolute;
   width: 40px;
   height: 22px;
@@ -675,6 +707,7 @@ p {
 }
 
 .timeline-counter {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -691,6 +724,7 @@ p {
 }
 
 .viewers-counter {
+  cursor: pointer;
   position: absolute;
   bottom: 0;
   right: 0;
