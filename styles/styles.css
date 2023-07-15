@@ -230,6 +230,25 @@ header {
     background-color: rgba(255, 0, 0, 0);
   }
 }
+@media (max-width: 1200px) {
+  .aside__wrapper {
+    grid-template-columns: min-content;
+    grid-template-rows: 1fr;
+    padding-bottom: 15px;
+  }
+  .aside__streamer-icon {
+    margin-right: 0;
+  }
+  .aside__streamer-wrapper {
+    display: none;
+  }
+  .aside__divider {
+    display: none;
+  }
+  .aside__info {
+    display: none;
+  }
+}
 .categories__list {
   overflow-x: auto;
   white-space: nowrap;
@@ -266,7 +285,7 @@ header {
 
 .carousel {
   margin-top: 50px;
-  width: 520px;
+  max-width: 520px;
   height: 280px;
   transform-style: preserve-3d;
   margin-inline: auto;
@@ -355,6 +374,7 @@ header {
   font-weight: 400;
   grid-column: 1/span 2;
   color: var(--icon-hover-color);
+  overflow: hidden;
 }
 
 input[type=radio] {
@@ -406,6 +426,26 @@ input[type=radio] {
   z-index: 3;
 }
 
+@media (max-width: 1000px) {
+  .carousel {
+    margin-top: 40px;
+    max-width: 420px;
+    height: 230px;
+  }
+  .carousel-card__streamer-descr {
+    height: 145px;
+  }
+}
+@media (max-width: 700px) {
+  .carousel {
+    margin-top: 30px;
+    max-width: 320px;
+    height: 200px;
+  }
+  .carousel-card__streamer-descr {
+    height: 115px;
+  }
+}
 .grid-container {
   margin-top: 70px;
   display: grid;
@@ -415,7 +455,7 @@ input[type=radio] {
 }
 
 .video {
-  max-width: 380px;
+  width: auto;
 }
 .video__img {
   cursor: pointer;
@@ -456,7 +496,7 @@ input[type=radio] {
 }
 .video__streamer-title, .video__streamer-nickname {
   cursor: pointer;
-  max-width: 300px;
+  max-width: 220px;
   font-size: 15px;
   font-weight: 400;
   white-space: nowrap;
@@ -477,6 +517,26 @@ input[type=radio] {
   font-size: 20px;
 }
 
+@media (max-width: 1500px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 1000px) {
+  .grid-container {
+    margin-top: 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 700px) {
+  .grid-container {
+    margin-top: 30px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .video__streamer-title, .video__streamer-nickname {
+    max-width: 390px;
+  }
+}
 main {
   position: relative;
   margin-left: 240px;
@@ -484,6 +544,11 @@ main {
   overflow: hidden;
 }
 
+@media (max-width: 1200px) {
+  main {
+    margin-left: 66px;
+  }
+}
 footer {
   position: sticky;
   bottom: 0;

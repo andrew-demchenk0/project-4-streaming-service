@@ -8,3 +8,8 @@ main{
     width: 100%;
     overflow: hidden;
 }
+@media (max-width: 1200px) {
+    main{
+        margin-left: 66px;
+    }
+}
