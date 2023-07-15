@@ -113,3 +113,27 @@
         background-color: rgba(red, 0);
     }
 }
+
+@media (max-width: 1200px) {
+    .aside{
+        &__wrapper{
+            grid-template-columns: min-content;
+            grid-template-rows: 1fr;
+            padding-bottom: 15px;
+        }
+        &__streamer{
+            &-icon{
+                margin-right: 0;
+            }
+            &-wrapper{
+                display: none;
+            }
+        }
+        &__divider{
+            display: none;
+        }
+        &__info{
+            display: none;
+        }
+    }
+}

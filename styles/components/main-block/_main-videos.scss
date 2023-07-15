@@ -7,7 +7,7 @@
 }
 
 .video{
-    max-width: 380px;
+    width: auto;
     &__img{
         cursor: pointer;
         position: relative;
@@ -48,7 +48,7 @@
         &-title,
         &-nickname{
             cursor: pointer;
-            max-width: 300px;
+            max-width: 220px;
             font-size: 15px;
             font-weight: 400;
             white-space: nowrap;
@@ -67,6 +67,32 @@
             cursor: pointer;
             margin-bottom: auto;
             font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 1500px) {
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 1000px) {
+    .grid-container{
+        margin-top: 50px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .grid-container{
+        margin-top: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .video{
+        &__streamer{
+            &-title,
+            &-nickname{
+                max-width: 390px;
+            }
         }
     }
 }
