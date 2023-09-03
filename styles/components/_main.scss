@@ -4,12 +4,12 @@
 
 main{
     position: relative;
-    margin-left: 240px;
     width: 100%;
     overflow: hidden;
+    flex-grow: 1;
 }
-@media (max-width: 1200px) {
-    main{
-        margin-left: 66px;
-    }
-}
+//@media (max-width: 1200px) {
+//    main{
+//        margin-left: 66px;
+//    }
+//}

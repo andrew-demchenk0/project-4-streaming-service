@@ -577,19 +577,14 @@ input[type=radio] {
 }
 main {
   position: relative;
-  margin-left: 240px;
   width: 100%;
   overflow: hidden;
+  flex-grow: 1;
 }
 
-@media (max-width: 1200px) {
-  main {
-    margin-left: 66px;
-  }
-}
 footer {
-  position: sticky;
-  bottom: 0;
+  position: relative;
+  width: 100%;
   text-align: center;
 }
 
@@ -663,8 +658,15 @@ p {
 }
 
 .wrapper {
-  margin-top: 76px;
   display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 76px 0 0 240px;
+  width: calc(100% - 240px);
+  position: relative;
+}
+.wrapper:last-child {
+  justify-content: flex-end;
 }
 
 .container {
@@ -741,6 +743,13 @@ p {
   margin: 5px;
   padding: 5px 7px;
   z-index: 3;
+}
+
+@media (max-width: 1200px) {
+  .wrapper {
+    margin-left: 66px;
+    width: calc(100% - 66px);
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

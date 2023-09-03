@@ -52,9 +52,15 @@ p {
 }
 
 .wrapper{
-    margin-top: 76px;
     display: flex;
-    // position: relative;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 76px 0 0 240px;
+    width: calc(100% - 240px);
+    position: relative;
+    &:last-child {
+      justify-content: flex-end;
+    }
 }
 .container{
     padding: 15px;
@@ -72,4 +78,11 @@ p {
 }
 .viewers-counter{
     @include viewersCounter;
+}
+
+@media (max-width: 1200px) {
+    .wrapper{
+        margin-left: 66px;
+        width: calc(100% - 66px);
+    }
 }
