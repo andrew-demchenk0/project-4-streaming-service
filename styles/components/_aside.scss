@@ -7,7 +7,7 @@
         grid-template-columns: 240px;
         grid-template-rows: 1fr 1px 150px;
         grid-column-gap: 0px;
-        grid-row-gap: 0px; 
+        grid-row-gap: 0px;
         height: calc(100% - 76px);
     }
     &__divider{
@@ -16,14 +16,17 @@
     &__streamers{
         height: 100%;
         overflow: auto;
-    }    
+    }
     &__streamer{
         cursor: pointer;
         padding:  10px 15px;
         display: flex;
         align-items: center;
+        color: var(--text-color);
         &:hover{
             background: var(--hover-color);
+            color: var(--text-color);
+
         }
         &-icon{
             padding: 5px;
@@ -79,7 +82,7 @@
             }
         }
     }
-    
+
     &__info{
         &-content{
             padding: 15px;

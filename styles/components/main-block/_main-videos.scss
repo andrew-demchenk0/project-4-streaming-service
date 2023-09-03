@@ -13,7 +13,7 @@
         height: 210px;
         width: 100%;
         &:hover > .video-hover-mask{
-            display: block;   
+            display: block;
         }
         img{
             width: 100%;
@@ -67,6 +67,7 @@
             padding: 0 10px;
             margin-bottom: auto;
             font-size: 20px;
+          color: var(--text-color);
         }
     }
 }
