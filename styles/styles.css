@@ -708,7 +708,7 @@ body ::-moz-selection {
     color: #fff;
 }
 
-body ::selection, body ::-moz-selection, body ::-webkit-selection {
+body ::selection, body ::-moz-selection {
     background: var(--main-color);
     color: #fff;
 }
